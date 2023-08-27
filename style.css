@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(0, 0%, 100%);
+}
+
+.container {
+    margin: 2% auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 250px;
+    gap: 20px;
+    grid-template-areas: 
+    "div1 div1 div1 div1"
+    "div2 div2 div2 div2"
+    "div3 div3 div3 div3"
+    "div4 div4 div4 div4"
+    "div5 div5 div5 div5"
+    "footer footer footer footer";
+}
+
+
+.child {
+    border-radius: 15px;
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
+.child .head {
+    grid-column: span 6;
+}
+
+.child .main {
+    grid-column: span 6;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.child .end {
+    grid-column: span 6;
+    opacity: 0.7;
+}
+
+.head .flex {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.flex img {
+    border: 3px solid hsla(0, 0%, 100%, 0.487);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.intro .name {
+    font-weight: 500;
+}
+
+.intro .occupation {
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+img{
+    height: 40px;
+}
+
+.div1 {
+    background-color: hsl(263, 55%, 52%);
+    grid-area: div1;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 550px;
+}
+
+.div2{
+    grid-area: div2;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.div3 {
+    grid-area: div3;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+    
+}
+
+.div3 .end {
+    opacity: 0.8;
+}
+
+.div4 {
+    grid-area: div4;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.div5 {
+    grid-area: div5;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+.div5 .end {
+    opacity: 0.8;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    grid-area: footer;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (min-width: 760px){
+    .container {
+        margin: 2% auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1100px;
+        gap: 20px;
+        /* grid-template-rows: repeat(2, minmax(200px, auto)); */
+        grid-template-areas: 
+        "div1 div1 div2 div5"
+        "div3 div4 div4 div5"
+        "footer footer footer footer";
+    }  
+}
+ 
+    
+
+  
